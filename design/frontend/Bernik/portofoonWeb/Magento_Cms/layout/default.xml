@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="page.wrapper">
+            <container name="page_top_after_nav" label="Page Top After Navigation Container" htmlTag="div"
+                       htmlClass="hero banner after-navigation" before="main.content"/>
+        </referenceContainer>
+
+        <referenceBlock name="footer_links" remove="true"/>
+
+
+        <referenceContainer name="footer">
+            <container name="contacts_footer_container" label="Contact Footer Container" htmlTag="div" htmlClass="links"
+                       before="cms_footer_links_container"/>
+            <container name="services_footer_links_container" label="Services Footer Links" htmlTag="div"
+                       htmlClass="links" after="cms_footer_links_container"/>
+            <container name="news_footer_container" label="News Footer Links" htmlTag="div" htmlClass="links"
+                       after="services_footer_links_container"/>
+        </referenceContainer>
+
+        <referenceContainer name="contacts_footer_container">
+            <container name="footer_contacts_title_container" htmlTag="div" htmlClass="footer-title">
+                <block class="Magento\Framework\View\Element\Text" name="footer.contactgegevens.title">
+                    <arguments>
+                        <argument name="text" xsi:type="string">CONTACTGEGEVENS</argument>
+                    </arguments>
+                </block>
+            </container>
+            <block class="Magento\Framework\View\Element\Html\Links" name="footer_links_contact">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">footer links address</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceBlock name="footer_links_contact">
+            <block class="Magento\Framework\View\Element\Text\TextList\Item" name="footer.contact.line.0">
+                <arguments>
+                    <argument name="li_params" xsi:type="array">
+                        <item name="class" xsi:type="string">contact-item</item>
+                    </argument>
+                    <argument name="inner_text" xsi:type="string">PortofoonWeb</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Text\TextList\Item" name="footer.contact.line.1">
+                <arguments>
+                    <argument name="li_params" xsi:type="array">
+                        <item name="class" xsi:type="string">contact-item</item>
+                    </argument>
+                    <argument name="inner_text" xsi:type="string">Zonnedauw 16</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Text\TextList\Item" name="footer.contact.line.2">
+                <arguments>
+                    <argument name="li_params" xsi:type="array">
+                        <item name="class" xsi:type="string">contact-item contact-item__padding</item>
+                    </argument>
+                    <argument name="inner_text" xsi:type="string">9202 PA Drachten</argument>
+                </arguments>
+            </block>
+
+
+            <block class="Magento\Framework\View\Element\Text\TextList\Item" name="footer.contact.line.3">
+                <arguments>
+                    <argument name="li_params" xsi:type="array">
+                        <item name="class" xsi:type="string">contact-item contact_item__telephone</item>
+                    </argument>
+                    <argument name="inner_text" xsi:type="string">0512 - 745 293</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Framework\View\Element\Text\TextList\Item" name="footer.contact.line.4">
+                <arguments>
+                    <argument name="li_params" xsi:type="array">
+                        <item name="class" xsi:type="string">contact-item contact-item__email</item>
+                    </argument>
+                    <argument name="inner_text" xsi:type="string">info@portofoonweb.nl</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Text\TextList\Item" name="footer.contact.line.5">
+                <arguments>
+                    <argument name="li_params" xsi:type="array">
+                        <item name="class" xsi:type="string">contact-item</item>
+                    </argument>
+                    <argument name="inner_text" xsi:type="string">K.v.K nr: 62061712</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Text\TextList\Item" name="footer.contact.line.6">
+                <arguments>
+                    <argument name="li_params" xsi:type="array">
+                        <item name="class" xsi:type="string">contact-item</item>
+                    </argument>
+                    <argument name="inner_text" xsi:type="string">BTW nr: NL854624624B01</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+        <referenceContainer name="services_footer_links_container">
+            <container name="footer_informatie_title_container" htmlTag="div" htmlClass="footer-title">
+                <block class="Magento\Framework\View\Element\Text" name="footer.contact.title">
+                    <arguments>
+                        <argument name="text" xsi:type="string">ALGEMENE INFORMATIE</argument>
+                    </arguments>
+                </block>
+            </container>
+            <block class="Magento\Framework\View\Element\Html\Links" name="footer_links_services">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">footer links</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceBlock name="footer_links_services">
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="portofoons-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Portofoons</argument>
+                    <argument name="path" xsi:type="string">Portofoons</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="toepassingen-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Toepassingen</argument>
+                    <argument name="path" xsi:type="string">Toepassingen</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="algemene-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Algemene voorwaarden</argument>
+                    <argument name="path" xsi:type="string">Algemene voorwaarden</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="betalen-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Betalen en Verzenden</argument>
+                    <argument name="path" xsi:type="string">Betalen en Verzenden</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="privacy-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Privacy en Cookies</argument>
+                    <argument name="path" xsi:type="string">Privacy en Cookies</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="disclaimer-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Disclaimer</argument>
+                    <argument name="path" xsi:type="string">Disclaimer</argument>
+                </arguments>
+            </block>
+
+        </referenceBlock>
+
+        <referenceContainer name="cms_footer_links_container">
+            <container name="footer_company_info_title_container" htmlTag="div" htmlClass="footer-title">
+                <block class="Magento\Framework\View\Element\Text" name="footer_company_info_title">
+                    <arguments>
+                        <argument name="text" xsi:type="string">KLANTENSERVICE</argument>
+                    </arguments>
+                </block>
+            </container>
+            <block class="Magento\Framework\View\Element\Html\Links" name="footer_links_cms">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">footer links</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceBlock name="footer_links_cms">
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="contact-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Contact</argument>
+                    <argument name="path" xsi:type="string">Contact</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="over-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Over PortofoonWEB</argument>
+                    <argument name="path" xsi:type="string">Over PortofoonWEB</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="offerte-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Offerte aanvraag</argument>
+                    <argument name="path" xsi:type="string">Offerte aanvraag</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="defect-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Defect en Retour</argument>
+                    <argument name="path" xsi:type="string">Defect en Retour</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="garantie-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Garantie</argument>
+                    <argument name="path" xsi:type="string">Garantie</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="veelgestelde-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Veelgestelde vragen</argument>
+                    <argument name="path" xsi:type="string">Veelgestelde vragen</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="B2B-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">B2B</argument>
+                    <argument name="path" xsi:type="string">B2B</argument>
+                </arguments>
+            </block>
+
+        </referenceBlock>
+
+        <referenceContainer name="news_footer_container">
+            <container name="footer_news_title_container" htmlTag="div" htmlClass="footer-title">
+                <block class="Magento\Framework\View\Element\Text" name="footer.news.title">
+                    <arguments>
+                        <argument name="text" xsi:type="string">NIEUWSBRIEF</argument>
+                    </arguments>
+                </block>
+            </container>
+            <block class="Magento\Framework\View\Element\Html\Links" name="footer_news">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">footer links address</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceBlock name="footer_news">
+            <block class="Magento\Framework\View\Element\Text\TextList\Item" name="footer.news.line.0">
+                <arguments>
+                    <argument name="li_params" xsi:type="array">
+                        <item name="class" xsi:type="string">news-item</item>
+                    </argument>
+                    <argument name="inner_text" xsi:type="string">Wilt u op de hoogte gehouden</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Text\TextList\Item" name="footer.news.line.1">
+                <arguments>
+                    <argument name="li_params" xsi:type="array">
+                        <item name="class" xsi:type="string">news-item</item>
+                    </argument>
+                    <argument name="inner_text" xsi:type="string">worden van de nieuwste</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Text\TextList\Item" name="footer.news.line.2">
+                <arguments>
+                    <argument name="li_params" xsi:type="array">
+                        <item name="class" xsi:type="string">news-item</item>
+                    </argument>
+                    <argument name="inner_text" xsi:type="string">Technieken i Aanbiedingen op het</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Text\TextList\Item" name="footer.news.line.3">
+                <arguments>
+                    <argument name="li_params" xsi:type="array">
+                        <item name="class" xsi:type="string">news-item news-item__subscribe</item>
+                    </argument>
+                    <argument name="inner_text" xsi:type="string">gebied van Portofoons?</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+
+        <move element="copyright" destination="before.body.end"/>
+
+
+    </body>
+</page>

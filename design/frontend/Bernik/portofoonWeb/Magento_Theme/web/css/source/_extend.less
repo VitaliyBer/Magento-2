@@ -1,0 +1,373 @@
+//_______Common
+
+& when (@media-common = true) {
+  .authorization-link {
+    border-radius: 5px;
+    background-image: linear-gradient(0deg, @color-secondary 0%, #8acdc4 100%);
+    width: 85px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    vertical-align: center;
+    text-align: center;
+    & a {
+      color: @color-white;
+      text-decoration: none;
+    }
+  }
+
+  .navigation .level10 > .level-top {
+    font-size: 39px;
+    line-height: 76px;
+    color: @color-primary;
+
+  }
+
+  .cms-index-index {
+    .page-title-wrapper {
+      display: none;
+    }
+  }
+  .page-footer {
+    color: @color-white;
+    background-color: @primary__color;
+    font-size: 18px;
+    text-align: left;
+    line-height: 20px;
+
+    & li {
+      display: inline-block;
+      text-align: left;
+      width: 220px;
+    }
+
+    & a {
+      color: @color-white;
+      font-size: 18px;
+      line-height: 25px;
+    }
+    & .logo {
+      margin: 0;
+      position: relative;
+      top: 2px;
+      right: 10px;
+
+    }
+    & .content {
+      border: none;
+    }
+    & .address li {
+      width: 280px;
+    }
+  }
+
+  .contact-item {
+    position: relative;
+  }
+
+  .contact-item.contact_item__telephone {
+    padding-left: 30px;
+    padding-top: 25px;
+  }
+
+  .contact-item.contact-item__email {
+    padding-left: 30px;
+    padding-bottom: 25px;
+  }
+
+  .contact-item.contact_item__telephone::before {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: '\f095';
+    font-size: 20px;
+    line-height: 20px;
+    vertical-align: center;
+    color: @color-white;
+    font-family: 'FontAwesome';
+    display: inline-block;
+    font-weight: normal;
+    overflow: hidden;
+    speak: none;
+    text-align: center;
+    position: absolute;
+    left: -5px;
+  }
+
+  .contact-item.contact-item__email::before {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: '\f003';
+    font-size: 20px;
+    line-height: 20px;
+    vertical-align: center;
+    color: @color-white;
+    font-family: 'FontAwesome';
+    display: inline-block;
+    font-weight: normal;
+    overflow: hidden;
+    speak: none;
+    text-align: center;
+    position: absolute;
+    left: -5px;
+  }
+
+  .footer-title {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .footer.content .links {
+    height: 250px;
+  }
+
+  .copyright {
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    border-top: 1px solid @color-secondary;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: @color-secondary;
+    color: @color-white;
+  }
+
+}
+
+//___________Mobile
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+  .page-header {
+    height: 150px;
+    flex-wrap: wrap;
+  }
+  .header_contact {
+    margin-top: 90px;
+    margin-right: 25%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 360px;
+    position: absolute;
+    right: 15px;
+    top: 12px;
+
+    & .header_contact-title {
+      font-size: 22px;
+      color: @color-primary;
+    }
+    & .header_contact-phone {
+      font-family: 'Covered By Your Grace', cursive;
+      font-style: italic;
+      font-size: 22px;
+      color: @color-secondary;
+    }
+  }
+
+  .block-search input {
+    width: 100%;
+    margin: 0;
+    padding-right: 35px;
+    padding-left: 25px;
+    border: 2px solid #89cdc3;
+    border-radius: 10px;
+    outline: none;
+    vertical-align: middle;
+
+  }
+
+  .block-search .action.search {
+    position: absolute;
+    left: 15px;
+    bottom: 30px;
+  }
+
+  .block-search .search_button {
+    background-color: @color-secondary;
+    color: @color-white;
+    position: absolute;
+    right: -190px;
+    bottom: 26px;
+    border-radius: 0 10px 10px 0;
+    width: 85px;
+    height: 30px;
+  }
+  .search_button {
+    display: none;
+  }
+  .navigation > ul {
+    display: block;
+    flex-direction: column;
+    text-transform: uppercase;
+    & li {
+      padding: auto;
+    }
+  }
+
+  .footer.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    & .links {
+      margin-bottom: 50px;
+      width: 300px;
+    }
+  }
+  .label {
+    position: absolute;
+    right: 80px;
+  }
+}
+
+//___________Deckstop
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .page-wrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+  div.panel.wrapper {
+    background-color: @color-primary;
+  }
+  .panel.header {
+    position: relative;
+  }
+  .authorization-link {
+    position: absolute;
+    right: 170px;
+
+  }
+  .welcome {
+    color: @color-white;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 38px;
+    position: absolute;
+    top: 15px;
+    right: 60px;
+  }
+  .minicart-wrapper .action.showcart:before {
+    color: @color-white;
+  }
+
+  div.header.content {
+    display: flex;
+    height: 90px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .logo {
+    margin-top: 25px;
+  }
+  .header_contact {
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 12px;
+    width: 360px;
+    position: absolute;
+    right: 15px;
+    top: 12px;
+
+    & .header_contact-title {
+      font-size: 22px;
+      color: @color-primary;
+    }
+    & .header_contact-phone {
+      font-family: 'Covered By Your Grace', cursive;
+      font-style: italic;
+      font-size: 22px;
+      color: @color-secondary;
+    }
+  }
+
+  .header_contact::before {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: '\f095';
+    font-size: 35px;
+    line-height: 33px;
+    vertical-align: center;
+    color: @color-secondary;
+    font-family: 'FontAwesome';
+    display: inline-block;
+    font-weight: normal;
+    overflow: hidden;
+    speak: none;
+    text-align: center;
+    position: absolute;
+    right: 357px;
+    top: 10px;
+  }
+
+  .header_contact-address {
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 200;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+  }
+
+  .block-search {
+    position: absolute;
+    right: 50%;
+    margin-top: 12px;
+  }
+
+  .block-search input {
+    width: 440px;
+    margin: 0;
+    padding-right: 35px;
+    padding-left: 25px;
+    border: 2px solid #89cdc3;
+    border-radius: 10px;
+    outline: none;
+    vertical-align: middle;
+
+  }
+
+  .block-search .action.search {
+    position: absolute;
+    left: 15px;
+    bottom: 30px;
+  }
+
+  .block-search .search_button {
+    background-color: @color-secondary;
+    color: @color-white;
+    position: absolute;
+    right: -190px;
+    bottom: 26px;
+    border-radius: 0 10px 10px 0;
+    width: 85px;
+    height: 30px;
+
+  }
+  .search_button {
+    display: block;
+  }
+  .navigation > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #store.menu {
+    margin-bottom: 60px;
+  }
+  .footer.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+}
+
+

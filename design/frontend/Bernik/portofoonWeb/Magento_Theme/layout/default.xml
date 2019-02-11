@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <link src="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" type="url" rel="stylesheet"/>
+        <meta name="viewport" content="width=640, initial-scale=0.5, minimal-ui"/>
+        <css src="css/owlcarousel/owl.carousel.min.css"/>
+        <css src="css/owlcarousel/owl.theme.default.min.css"/>
+    </head>
+    <body>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+                <argument name="logo_alt" xsi:type="string">PortofonnWeb</argument>
+                <argument name="logo_img_width" xsi:type="number">300</argument>
+                <argument name="logo_img_height" xsi:type="number">50</argument>
+            </arguments>
+        </referenceBlock>
+
+
+        <referenceContainer name="header-wrapper">
+            <container name="header_contacts_container" htmlTag="div" htmlClass="header_contact" after="-">
+                <container name="header_contacts_title_container" htmlTag="div" htmlClass="header_contact-title"
+                           after="-">
+                    <block class="Magento\Framework\View\Element\Text" name="header.contact.title">
+                        <arguments>
+                            <argument name="text" xsi:type="string">Heeft u vragen?</argument>
+                        </arguments>
+                    </block>
+                </container>
+                <container name="header_contacts_phone_container" htmlTag="div" htmlClass="header_contact-phone"
+                           after="-">
+                    <block class="Magento\Framework\View\Element\Text" name="header.contact.phone">
+                        <arguments>
+                            <argument name="text" xsi:type="string">Bel 0512-745293</argument>
+                        </arguments>
+                    </block>
+                </container>
+                <container name="header_contacts_address_container" htmlTag="div" htmlClass="header_contact-address"
+                           after="-">
+                    <block class="Magento\Framework\View\Element\Text" name="header.contact.address">
+                        <arguments>
+                            <argument name="text" xsi:type="string">Bereikbaar maandag t/m vrijdag van: 09:00 - 17:00
+                            </argument>
+                        </arguments>
+                    </block>
+                </container>
+            </container>
+        </referenceContainer>
+
+
+        <referenceBlock name="report.bugs" remove="true"/>
+        <referenceBlock name="my-account-link" remove="true"/>
+        <referenceBlock name="register-link" remove="true"/>
+        <referenceBlock name="advanced-search-link" remove="true"/>
+        <referenceBlock name="wishlist" remove="true"/>
+
+        <referenceBlock name="top.links">
+            <block class="Magento\Theme\Block\Html\Header" name="header.other" as="header.other" after="header">
+                <arguments>
+                    <argument name="show_part" xsi:type="string">other</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+
+        <move element="minicart" destination="top.links" after="header"/>
+        <move element="top.search" destination="header-wrapper" after="logo"/>
+
+
+    </body>
+</page>

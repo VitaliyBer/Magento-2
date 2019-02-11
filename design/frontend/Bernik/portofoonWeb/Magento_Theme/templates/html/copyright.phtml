@@ -1,0 +1,12 @@
+<?php
+/**
+ * It`s work?
+ * See COPYING.txt for license details.
+ */
+?>
+    <small class="copyright">
+        <span><?php /* @escapeNotVerified */
+            echo $block->getCopyright() ?></span>
+    </small>
+
+<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('block_identifier')->toHtml(); ?>

@@ -1,0 +1,154 @@
+& when (@media-common = true) {
+  .modular-row {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  .content-container {
+    width: 700px;
+    margin: 0 auto;
+  }
+
+  .title {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 40px;
+    line-height: 30px;
+    color: @color-primary;
+  }
+
+  .page-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-bottom: 80px;
+  }
+  .content-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .title-content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 16px 150px;
+  }
+  .content-text {
+    align-self: center;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .page-content:before {
+    content: ' ';
+    width: 250px;
+    height: 600px;
+    display: inline-block;
+    background-image: url("../images/VectorSmartObject.png");
+    background-size: 170px;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 1250px;
+    top: 330px;
+
+  }
+
+  .title-content_social {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .content-social_logo {
+    margin: 10px;
+    padding: 0;
+    margin-bottom: 90px;
+  }
+  .full-columns {
+    max-height: 90px;
+  }
+  .modal-row_brand {
+    padding-top: 25px;
+    border-top: 2px solid @color-white;
+  }
+  .brand {
+    width: 1150px;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+
+    & li {
+      list-style: none;
+    }
+  }
+
+}
+
+//_______________Mobile
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+  .page-content {
+    justify-content: left;
+    margin: 0 auto;
+    width: 500px;
+  }
+  .title-content {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .brand-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .motorola img {
+    width: 35px;
+  }
+
+  .baofeng img {
+    width: 120px;
+  }
+  .icom img {
+    width: 40px;
+  }
+  .kenwood img {
+    width: 125px;
+  }
+  .hytera img {
+    width: 55px;
+  }
+
+}
+
+//___________Deckstop
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .page-content {
+    width: 700px;
+  }
+  .motorola img {
+    width: 70px;
+  }
+
+  .baofeng img {
+    width: 245px;
+  }
+  .icom img {
+    width: 85px;
+  }
+  .kenwood img {
+    width: 255px;
+  }
+  .hytera img {
+    width: 110px;
+  }
+}
+
+.block.newsletter {
+  position: relative;
+  width: 270px;
+  padding-bottom: 15px;
+}

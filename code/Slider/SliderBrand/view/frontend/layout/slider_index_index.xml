@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="main">
+            <container name="title-content" label="Title Content Container" htmlTag="div"
+                       htmlClass="title-container-block">
+                <block class="Magento\Framework\View\Element\Template" name="portofoonWeb.content.title"
+                       template="Slider_SliderBrand::title-page.phtml"/>
+            </container>
+        </referenceContainer>
+
+        <referenceContainer name="page.wrapper">
+            <container name="full-columns" htmlTag="div" htmlClass="full-columns" after="main.content" before="footer">
+                <container name="full-main" label="Custom Main Content Container" htmlTag="div"
+                           htmlClass="column main"/>
+            </container>
+        </referenceContainer>
+
+        <referenceContainer name="full-main">
+            <container name="brand" label="Brand Content Container" htmlTag="div" htmlClass="brand-container-block">
+                <block class="Magento\Framework\View\Element\Template" name="portofoonWeb.content.brand"
+                       template="Slider_SliderBrand::brand.phtml"/>
+            </container>
+        </referenceContainer>
+    </body>
+</page>
